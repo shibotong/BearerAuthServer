@@ -29,7 +29,7 @@ class Configuration: Codable {
 
 func readFile(atPath path: String) -> Configuration? {
     do {
-        let fileURL = URL(filePath: path)
+        let fileURL = URL(fileURLWithPath: path)
         let data = try Data(contentsOf: fileURL)
         let decoder = JSONDecoder()
         return try decoder.decode(Configuration.self, from: data)
