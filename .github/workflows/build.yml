@@ -23,4 +23,4 @@ jobs:
         run: docker compose build
 
       - name: Push Docker image to Docker Hub
-        run: docker push shibotong/bearer-auth-server
+        run: docker push shibotong/bearer-auth-server:v1.0.0
