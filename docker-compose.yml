@@ -19,7 +19,7 @@ x-shared_environment: &shared_environment
   
 services:
   app:
-    image: shibotong/bearer-reverse:v1.0.0
+    image: shibotong/bearer-auth-server:v1.0.0
     build:
       context: .
     environment:
