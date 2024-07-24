@@ -12,7 +12,8 @@ struct BearerAuthMiddleWare: AsyncMiddleware {
         guard let bearerToken = request.headers.bearerAuthorization?.token else {
             throw Abort(.unauthorized, reason: "A bearer token is required")
         }
-        guard tokens.contains(bearerToken) else {
+        
+        guard await Configuration.config.tokens.contains(bearerToken) else {
             throw Abort(.unauthorized, reason: "Invalid token")
         }
         

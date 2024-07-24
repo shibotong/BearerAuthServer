@@ -19,7 +19,7 @@ x-shared_environment: &shared_environment
   
 services:
   app:
-    image: bearer-reverse:latest
+    image: bearer-reverse:v1.0.0
     build:
       context: .
     environment:
