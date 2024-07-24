@@ -10,7 +10,7 @@ import Foundation
 @MainActor
 class Configuration: Codable {
     static let config: Configuration = {
-        let configPath = "/mnt/BearerAuth/config.json"
+        let configPath = "/BearerAuth/config.json"
         if let configuration = readFile(atPath: configPath) {
             print("Redirect URL: \(configuration.targetURL)")
             print("Bearer tokens: \(configuration.tokens)")
