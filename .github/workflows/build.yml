@@ -1,9 +1,12 @@
 name: Test build image
 
 on:
-  push:
+  pull_request:
     branches:
       - develop
+      - main
+    
+
 
 jobs:
   build:
