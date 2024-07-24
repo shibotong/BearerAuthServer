@@ -21,3 +21,4 @@ To get a local copy up and running follow these simple steps.
 
 ### Usage
 #### TL;DR
+`docker run -d --name=ollama-auth -p [PORT]:8080 -v [/path/to/file]:/BearerAuth --restart=always shibotong/bearer-auth-server:v1.0.0`
