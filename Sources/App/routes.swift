@@ -7,6 +7,10 @@ func routes(_ app: Application) throws {
         app.on(method, "**") { req async throws in
             return try await req.ollamaRedirect()
         }
+        
+        app.on(method, "") { req async throws in
+            return try await req.ollamaRedirect()
+        }
     }
 }
 
